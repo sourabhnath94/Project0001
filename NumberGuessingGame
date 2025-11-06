@@ -6,31 +6,31 @@ public class NumberGuessingGame {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 
-        int randomNumber = random.nextInt(100) + 1;  // Correct answer generated
+        int randomNumber = random.nextInt(100) + 1;  
         int guess;
 
-        System.out.println("🎯 Number Guessing Game!");
-        System.out.println("Guess a number between 1 and 100.");
-        System.out.println("You have unlimited chances. Keep trying!");
+        System.out.println(":Number Guessing Game:");
+        System.out.println("Guess a number between 1 and 100.\n");
         System.out.println("-------------------------------------------");
 
-        while (true) { // Infinite loop until correct answer
+        while (true) { 
             System.out.print("Enter your guess: ");
             guess = sc.nextInt();
 
             if (guess == randomNumber) {
-                System.out.println("✅ Correct Answer! You guessed it right.");
+                System.out.println("Correct Answer! You guessed it right.");
                 break; // End game
             } else {
-                System.out.println("❌ Wrong Answer!");
+                System.out.println("Wrong Answer!");
                 if (guess > randomNumber) {
-                    System.out.println("Hint: Your guess is TOO HIGH.\n");
+                    System.out.println("Hint: Your guess is too HIGH.\n");
                 } else {
-                    System.out.println("Hint: Your guess is TOO LOW.\n");
+                    System.out.println("Hint: Your guess is too LOW.\n");
                 }
             }
         }
 
         sc.close();
     }
+
 }
